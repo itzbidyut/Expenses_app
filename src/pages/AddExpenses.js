@@ -25,18 +25,22 @@ export default function AddExpenses() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      id: Math.floor(Math.random() * 10000),
-      title,
-      expence: parseInt(expence),
-      category,
-      createdAt: new Date(),
-    };
-    dispatch(addExpense(data));
-    setMessage("Expense added successfully");
-    setTitle("");
-    setExpence("");
-    setCategory("");
+    if (title.length > 0 && expence.length > 0 && category.length > 0) {
+      const data = {
+        id: Math.floor(Math.random() * 10000),
+        title,
+        expence: parseInt(expence),
+        category,
+        createdAt: new Date(),
+      };
+      dispatch(addExpense(data));
+      setMessage("Expense added successfully");
+      setTitle("");
+      setExpence("");
+      setCategory("");
+    } else {
+      setMessage("Please fill all the input");
+    }
   };
   return (
     <div className="addExpenses">

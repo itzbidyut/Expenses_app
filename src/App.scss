@@ -160,3 +160,12 @@ body {
     background-color: rgb(53, 126, 33);
   }
 }
+
+.bar-chaart {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  .bar {
+    width: 700px;
+  }
+}
