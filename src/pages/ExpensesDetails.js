@@ -87,7 +87,7 @@ export default function ExpensesDetails() {
       {list.length ? (
         <div>
           <h2 className="mb-4"> Your Total Expenses - $ {totalExpenses}</h2>
-          <div className="bar-chaart">
+          <div className="bar-chaart mt-5">
             <div className="bar">
               <Bar options={options} data={data} />
             </div>
